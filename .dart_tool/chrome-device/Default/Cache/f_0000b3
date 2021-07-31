@@ -1,0 +1,1604 @@
+define(['dart_sdk', 'packages/notes_app/modal_class/notes.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/material/typography.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter/src/material/search.dart'], (function load__packages__notes_app__screens__search_note_dart(dart_sdk, packages__notes_app__modal_class__notes$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__material__typography$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter__src__material__search$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const notes = packages__notes_app__modal_class__notes$46dart.modal_class__notes;
+  const theme$ = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const icon_button = packages__flutter__src__material__icon_button$46dart.src__material__icon_button;
+  const list_tile = packages__flutter__src__material__icon_button$46dart.src__material__list_tile;
+  const theme_data = packages__flutter__src__material__icon_button$46dart.src__material__theme_data;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const text_theme = packages__flutter__src__material__typography$46dart.src__material__text_theme;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const search = packages__flutter__src__material__search$46dart.src__material__search;
+  var search_note = Object.create(dart.library);
+  var $length = dartx.length;
+  var $_get = dartx._get;
+  var $toLowerCase = dartx.toLowerCase;
+  var $contains = dartx.contains;
+  var $add = dartx.add;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    NoteL: () => (T.NoteL = dart.constFn(dart.legacy(notes.Note)))(),
+    JSArrayOfNoteL: () => (T.JSArrayOfNoteL = dart.constFn(_interceptors.JSArray$(T.NoteL())))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    ListTileL: () => (T.ListTileL = dart.constFn(dart.legacy(list_tile.ListTile)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    BuildContextLAndintLToListTileL: () => (T.BuildContextLAndintLToListTileL = dart.constFn(dart.fnType(T.ListTileL(), [T.BuildContextL(), T.intL()])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 17,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 11,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 27,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 9,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 9,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 7,
+        [_Location_line]: 26,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 15,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 7,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 7,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14, C[15] || CT.C15], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 23,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 17,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 17,
+        [_Location_line]: 67,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.constList([C[18] || CT.C18, C[19] || CT.C19, C[20] || CT.C20], T._LocationL());
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[17] || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 64,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 64,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.constList([C[23] || CT.C23, C[24] || CT.C24, C[25] || CT.C25], T._LocationL());
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[22] || CT.C22,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 61,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 15,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 15,
+        [_Location_line]: 72,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28, C[29] || CT.C29], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 70,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 11,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 11,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 11,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.constList([C[32] || CT.C32, C[33] || CT.C33, C[34] || CT.C34], T._LocationL());
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[31] || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37], T._LocationL());
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 56,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.constList([C[40] || CT.C40, C[41] || CT.C41], T._LocationL());
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[39] || CT.C39,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 25,
+        [_Location_line]: 92,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 19,
+        [_Location_line]: 93,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 19,
+        [_Location_line]: 94,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.constList([C[44] || CT.C44, C[45] || CT.C45, C[46] || CT.C46], T._LocationL());
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[43] || CT.C43,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 91,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 17,
+        [_Location_line]: 89,
+        [_Location_file]: null
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 17,
+        [_Location_line]: 90,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 91,
+        [_Location_file]: null
+      });
+    },
+    get C48() {
+      return C[48] = dart.constList([C[49] || CT.C49, C[50] || CT.C50, C[51] || CT.C51], T._LocationL());
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[48] || CT.C48,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 88,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 17,
+        [_Location_line]: 98,
+        [_Location_file]: null
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 99,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C[53] = dart.constList([C[54] || CT.C54, C[55] || CT.C55], T._LocationL());
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[53] || CT.C53,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 97,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 85,
+        [_Location_file]: null
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 86,
+        [_Location_file]: null
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C57() {
+      return C[57] = dart.constList([C[58] || CT.C58, C[59] || CT.C59, C[60] || CT.C60], T._LocationL());
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[57] || CT.C57,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 84,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 84,
+        [_Location_file]: null
+      });
+    },
+    get C62() {
+      return C[62] = dart.constList([C[63] || CT.C63], T._LocationL());
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[62] || CT.C62,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 83,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C66() {
+      return C[66] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 11,
+        [_Location_line]: 82,
+        [_Location_file]: null
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 83,
+        [_Location_file]: null
+      });
+    },
+    get C65() {
+      return C[65] = dart.constList([C[66] || CT.C66, C[67] || CT.C67], T._LocationL());
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[65] || CT.C65,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 81,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 25,
+        [_Location_line]: 112,
+        [_Location_file]: null
+      });
+    },
+    get C71() {
+      return C[71] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 19,
+        [_Location_line]: 113,
+        [_Location_file]: null
+      });
+    },
+    get C69() {
+      return C[69] = dart.constList([C[70] || CT.C70, C[71] || CT.C71], T._LocationL());
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[69] || CT.C69,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 111,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 40,
+        [_Location_line]: 116,
+        [_Location_file]: null
+      });
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 19,
+        [_Location_line]: 117,
+        [_Location_file]: null
+      });
+    },
+    get C73() {
+      return C[73] = dart.constList([C[74] || CT.C74, C[75] || CT.C75], T._LocationL());
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[73] || CT.C73,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 115,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 40,
+        [_Location_line]: 123,
+        [_Location_file]: null
+      });
+    },
+    get C79() {
+      return C[79] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 19,
+        [_Location_line]: 124,
+        [_Location_file]: null
+      });
+    },
+    get C77() {
+      return C[77] = dart.constList([C[78] || CT.C78, C[79] || CT.C79], T._LocationL());
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[77] || CT.C77,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 122,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "leading",
+        [_Location_column]: 17,
+        [_Location_line]: 111,
+        [_Location_file]: null
+      });
+    },
+    get C83() {
+      return C[83] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 17,
+        [_Location_line]: 115,
+        [_Location_file]: null
+      });
+    },
+    get C84() {
+      return C[84] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "subtitle",
+        [_Location_column]: 17,
+        [_Location_line]: 122,
+        [_Location_file]: null
+      });
+    },
+    get C85() {
+      return C[85] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 17,
+        [_Location_line]: 126,
+        [_Location_file]: null
+      });
+    },
+    get C81() {
+      return C[81] = dart.constList([C[82] || CT.C82, C[83] || CT.C83, C[84] || CT.C84, C[85] || CT.C85], T._LocationL());
+    },
+    get C80() {
+      return C[80] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[81] || CT.C81,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 110,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C88() {
+      return C[88] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemCount",
+        [_Location_column]: 13,
+        [_Location_line]: 108,
+        [_Location_file]: null
+      });
+    },
+    get C89() {
+      return C[89] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemBuilder",
+        [_Location_column]: 13,
+        [_Location_line]: 109,
+        [_Location_file]: null
+      });
+    },
+    get C87() {
+      return C[87] = dart.constList([C[88] || CT.C88, C[89] || CT.C89], T._LocationL());
+    },
+    get C86() {
+      return C[86] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[87] || CT.C87,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 107,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C92() {
+      return C[92] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 11,
+        [_Location_line]: 106,
+        [_Location_file]: null
+      });
+    },
+    get C93() {
+      return C[93] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 107,
+        [_Location_file]: null
+      });
+    },
+    get C91() {
+      return C[91] = dart.constList([C[92] || CT.C92, C[93] || CT.C93], T._LocationL());
+    },
+    get C90() {
+      return C[90] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[91] || CT.C91,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 105,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C96() {
+      return C[96] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 23,
+        [_Location_line]: 161,
+        [_Location_file]: null
+      });
+    },
+    get C97() {
+      return C[97] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 17,
+        [_Location_line]: 162,
+        [_Location_file]: null
+      });
+    },
+    get C98() {
+      return C[98] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 17,
+        [_Location_line]: 163,
+        [_Location_file]: null
+      });
+    },
+    get C95() {
+      return C[95] = dart.constList([C[96] || CT.C96, C[97] || CT.C97, C[98] || CT.C98], T._LocationL());
+    },
+    get C94() {
+      return C[94] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[95] || CT.C95,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 160,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C101() {
+      return C[101] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 158,
+        [_Location_file]: null
+      });
+    },
+    get C102() {
+      return C[102] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 159,
+        [_Location_file]: null
+      });
+    },
+    get C103() {
+      return C[103] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 160,
+        [_Location_file]: null
+      });
+    },
+    get C100() {
+      return C[100] = dart.constList([C[101] || CT.C101, C[102] || CT.C102, C[103] || CT.C103], T._LocationL());
+    },
+    get C99() {
+      return C[99] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[100] || CT.C100,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 157,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C106() {
+      return C[106] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 15,
+        [_Location_line]: 167,
+        [_Location_file]: null
+      });
+    },
+    get C107() {
+      return C[107] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 15,
+        [_Location_line]: 168,
+        [_Location_file]: null
+      });
+    },
+    get C105() {
+      return C[105] = dart.constList([C[106] || CT.C106, C[107] || CT.C107], T._LocationL());
+    },
+    get C104() {
+      return C[104] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[105] || CT.C105,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 166,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C110() {
+      return C[110] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 11,
+        [_Location_line]: 154,
+        [_Location_file]: null
+      });
+    },
+    get C111() {
+      return C[111] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 11,
+        [_Location_line]: 155,
+        [_Location_file]: null
+      });
+    },
+    get C112() {
+      return C[112] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 11,
+        [_Location_line]: 156,
+        [_Location_file]: null
+      });
+    },
+    get C109() {
+      return C[109] = dart.constList([C[110] || CT.C110, C[111] || CT.C111, C[112] || CT.C112], T._LocationL());
+    },
+    get C108() {
+      return C[108] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[109] || CT.C109,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 153,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C115() {
+      return C[115] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 153,
+        [_Location_file]: null
+      });
+    },
+    get C114() {
+      return C[114] = dart.constList([C[115] || CT.C115], T._LocationL());
+    },
+    get C113() {
+      return C[113] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[114] || CT.C114,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 152,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C118() {
+      return C[118] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 151,
+        [_Location_file]: null
+      });
+    },
+    get C119() {
+      return C[119] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 152,
+        [_Location_file]: null
+      });
+    },
+    get C117() {
+      return C[117] = dart.constList([C[118] || CT.C118, C[119] || CT.C119], T._LocationL());
+    },
+    get C116() {
+      return C[116] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[117] || CT.C117,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 150,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C122() {
+      return C[122] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 25,
+        [_Location_line]: 188,
+        [_Location_file]: null
+      });
+    },
+    get C123() {
+      return C[123] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 19,
+        [_Location_line]: 189,
+        [_Location_file]: null
+      });
+    },
+    get C124() {
+      return C[124] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 19,
+        [_Location_line]: 190,
+        [_Location_file]: null
+      });
+    },
+    get C121() {
+      return C[121] = dart.constList([C[122] || CT.C122, C[123] || CT.C123, C[124] || CT.C124], T._LocationL());
+    },
+    get C120() {
+      return C[120] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[121] || CT.C121,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 187,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C127() {
+      return C[127] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 17,
+        [_Location_line]: 185,
+        [_Location_file]: null
+      });
+    },
+    get C128() {
+      return C[128] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 17,
+        [_Location_line]: 186,
+        [_Location_file]: null
+      });
+    },
+    get C129() {
+      return C[129] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 187,
+        [_Location_file]: null
+      });
+    },
+    get C126() {
+      return C[126] = dart.constList([C[127] || CT.C127, C[128] || CT.C128, C[129] || CT.C129], T._LocationL());
+    },
+    get C125() {
+      return C[125] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[126] || CT.C126,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 184,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C132() {
+      return C[132] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 17,
+        [_Location_line]: 194,
+        [_Location_file]: null
+      });
+    },
+    get C133() {
+      return C[133] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 195,
+        [_Location_file]: null
+      });
+    },
+    get C131() {
+      return C[131] = dart.constList([C[132] || CT.C132, C[133] || CT.C133], T._LocationL());
+    },
+    get C130() {
+      return C[130] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[131] || CT.C131,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 193,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C136() {
+      return C[136] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 181,
+        [_Location_file]: null
+      });
+    },
+    get C137() {
+      return C[137] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 182,
+        [_Location_file]: null
+      });
+    },
+    get C138() {
+      return C[138] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 183,
+        [_Location_file]: null
+      });
+    },
+    get C135() {
+      return C[135] = dart.constList([C[136] || CT.C136, C[137] || CT.C137, C[138] || CT.C138], T._LocationL());
+    },
+    get C134() {
+      return C[134] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[135] || CT.C135,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 180,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C141() {
+      return C[141] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 180,
+        [_Location_file]: null
+      });
+    },
+    get C140() {
+      return C[140] = dart.constList([C[141] || CT.C141], T._LocationL());
+    },
+    get C139() {
+      return C[139] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[140] || CT.C140,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 179,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C144() {
+      return C[144] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 11,
+        [_Location_line]: 178,
+        [_Location_file]: null
+      });
+    },
+    get C145() {
+      return C[145] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 179,
+        [_Location_file]: null
+      });
+    },
+    get C143() {
+      return C[143] = dart.constList([C[144] || CT.C144, C[145] || CT.C145], T._LocationL());
+    },
+    get C142() {
+      return C[142] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[143] || CT.C143,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 177,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C148() {
+      return C[148] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 25,
+        [_Location_line]: 208,
+        [_Location_file]: null
+      });
+    },
+    get C149() {
+      return C[149] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 19,
+        [_Location_line]: 209,
+        [_Location_file]: null
+      });
+    },
+    get C147() {
+      return C[147] = dart.constList([C[148] || CT.C148, C[149] || CT.C149], T._LocationL());
+    },
+    get C146() {
+      return C[146] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[147] || CT.C147,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 207,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C152() {
+      return C[152] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 40,
+        [_Location_line]: 212,
+        [_Location_file]: null
+      });
+    },
+    get C153() {
+      return C[153] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 19,
+        [_Location_line]: 213,
+        [_Location_file]: null
+      });
+    },
+    get C151() {
+      return C[151] = dart.constList([C[152] || CT.C152, C[153] || CT.C153], T._LocationL());
+    },
+    get C150() {
+      return C[150] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[151] || CT.C151,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 211,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C156() {
+      return C[156] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 40,
+        [_Location_line]: 219,
+        [_Location_file]: null
+      });
+    },
+    get C157() {
+      return C[157] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 19,
+        [_Location_line]: 220,
+        [_Location_file]: null
+      });
+    },
+    get C155() {
+      return C[155] = dart.constList([C[156] || CT.C156, C[157] || CT.C157], T._LocationL());
+    },
+    get C154() {
+      return C[154] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[155] || CT.C155,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 218,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C160() {
+      return C[160] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "leading",
+        [_Location_column]: 17,
+        [_Location_line]: 207,
+        [_Location_file]: null
+      });
+    },
+    get C161() {
+      return C[161] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 17,
+        [_Location_line]: 211,
+        [_Location_file]: null
+      });
+    },
+    get C162() {
+      return C[162] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "subtitle",
+        [_Location_column]: 17,
+        [_Location_line]: 218,
+        [_Location_file]: null
+      });
+    },
+    get C163() {
+      return C[163] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 17,
+        [_Location_line]: 222,
+        [_Location_file]: null
+      });
+    },
+    get C159() {
+      return C[159] = dart.constList([C[160] || CT.C160, C[161] || CT.C161, C[162] || CT.C162, C[163] || CT.C163], T._LocationL());
+    },
+    get C158() {
+      return C[158] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[159] || CT.C159,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 206,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C166() {
+      return C[166] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemCount",
+        [_Location_column]: 13,
+        [_Location_line]: 204,
+        [_Location_file]: null
+      });
+    },
+    get C167() {
+      return C[167] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemBuilder",
+        [_Location_column]: 13,
+        [_Location_line]: 205,
+        [_Location_file]: null
+      });
+    },
+    get C165() {
+      return C[165] = dart.constList([C[166] || CT.C166, C[167] || CT.C167], T._LocationL());
+    },
+    get C164() {
+      return C[164] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[165] || CT.C165,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 203,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    },
+    get C170() {
+      return C[170] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 11,
+        [_Location_line]: 202,
+        [_Location_file]: null
+      });
+    },
+    get C171() {
+      return C[171] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 203,
+        [_Location_file]: null
+      });
+    },
+    get C169() {
+      return C[169] = dart.constList([C[170] || CT.C170, C[171] || CT.C171], T._LocationL());
+    },
+    get C168() {
+      return C[168] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[169] || CT.C169,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 201,
+        [_Location_file]: "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart"
+      });
+    }
+  }, false);
+  var C = Array(172).fill(void 0);
+  var I = [
+    "file:///C:/Users/pc/Desktop/FLUTTER-COMPLETE-NOTE-APP-USING-SQLITE-DATABASE---Staggered-GridView-main/lib/screens/search_note.dart",
+    "package:notes_app/screens/search_note.dart"
+  ];
+  var notes$ = dart.privateName(search_note, "NotesSearch.notes");
+  var filteredNotes = dart.privateName(search_note, "NotesSearch.filteredNotes");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  search_note.NotesSearch = class NotesSearch extends search.SearchDelegate$(dart.legacy(notes.Note)) {
+    get notes() {
+      return this[notes$];
+    }
+    set notes(value) {
+      super.notes = value;
+    }
+    get filteredNotes() {
+      return this[filteredNotes];
+    }
+    set filteredNotes(value) {
+      this[filteredNotes] = value;
+    }
+    appBarTheme(context) {
+      if (!(context != null)) dart.assertFailed(null, I[0], 11, 12, "context != null");
+      let theme = theme$.Theme.of(context).copyWith({hintColor: colors.Colors.black, primaryColor: colors.Colors.white, textTheme: new text_theme.TextTheme.new({headline6: new text_style.TextStyle.new({color: colors.Colors.black, fontWeight: ui.FontWeight.bold, fontSize: 16.0})})});
+      if (!(theme != null)) dart.assertFailed(null, I[0], 19, 12, "theme != null");
+      return theme;
+    }
+    buildActions(context) {
+      return T.JSArrayOfWidgetL().of([new icon_button.IconButton.new({icon: new icon.Icon.new(icons.Icons.clear, {color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), onPressed: dart.fn(() => {
+            this.query = "";
+          }, T.VoidToNull()), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4})]);
+    }
+    buildLeading(context) {
+      return new icon_button.IconButton.new({icon: new icon.Icon.new(icons.Icons.arrow_back, {color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), onPressed: dart.fn(() => {
+          this.close(context, null);
+        }, T.VoidToNull()), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12});
+    }
+    buildResults(context) {
+      if (this.query === "") {
+        return new container.Container.new({color: colors.Colors.white, child: new basic.Center.new({child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.center, mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new basic.SizedBox.new({width: 50.0, height: 50.0, child: new icon.Icon.new(icons.Icons.search, {size: 50.0, color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[16] || CT.C16}), $creationLocationd_0dea112b090073317d4: C[21] || CT.C21}), new text.Text.new("Enter a note to search.", {style: new text_style.TextStyle.new({color: colors.Colors.black}), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26})]), $creationLocationd_0dea112b090073317d4: C[30] || CT.C30}), $creationLocationd_0dea112b090073317d4: C[35] || CT.C35}), $creationLocationd_0dea112b090073317d4: C[38] || CT.C38});
+      } else {
+        this.filteredNotes = T.JSArrayOfNoteL().of([]);
+        this.getFilteredList(this.notes);
+        if (this.filteredNotes[$length] === 0) {
+          return new container.Container.new({color: colors.Colors.white, child: new basic.Center.new({child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.center, mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new basic.SizedBox.new({width: 50.0, height: 50.0, child: new icon.Icon.new(icons.Icons.sentiment_dissatisfied, {size: 50.0, color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[42] || CT.C42}), $creationLocationd_0dea112b090073317d4: C[47] || CT.C47}), new text.Text.new("No results found", {style: new text_style.TextStyle.new({color: colors.Colors.black}), $creationLocationd_0dea112b090073317d4: C[52] || CT.C52})]), $creationLocationd_0dea112b090073317d4: C[56] || CT.C56}), $creationLocationd_0dea112b090073317d4: C[61] || CT.C61}), $creationLocationd_0dea112b090073317d4: C[64] || CT.C64});
+        } else {
+          return new container.Container.new({color: colors.Colors.white, child: new scroll_view.ListView.builder({itemCount: this.filteredNotes[$length] == null ? 0 : this.filteredNotes[$length], itemBuilder: dart.fn((context, index) => new list_tile.ListTile.new({leading: new icon.Icon.new(icons.Icons.note, {color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[68] || CT.C68}), title: new text.Text.new(this.filteredNotes[$_get](index).title, {style: new text_style.TextStyle.new({fontWeight: ui.FontWeight.bold, fontSize: 18.0, color: colors.Colors.black}), $creationLocationd_0dea112b090073317d4: C[72] || CT.C72}), subtitle: new text.Text.new(this.filteredNotes[$_get](index).description, {style: new text_style.TextStyle.new({fontSize: 14.0, color: colors.Colors.grey}), $creationLocationd_0dea112b090073317d4: C[76] || CT.C76}), onTap: dart.fn(() => {
+                  this.close(context, this.filteredNotes[$_get](index));
+                }, T.VoidToNull()), $creationLocationd_0dea112b090073317d4: C[80] || CT.C80}), T.BuildContextLAndintLToListTileL()), $creationLocationd_0dea112b090073317d4: C[86] || CT.C86}), $creationLocationd_0dea112b090073317d4: C[90] || CT.C90});
+        }
+      }
+    }
+    getFilteredList(note) {
+      for (let i = 0; i < dart.notNull(note[$length]); i = i + 1) {
+        if (note[$_get](i).title[$toLowerCase]()[$contains](this.query) || note[$_get](i).description[$toLowerCase]()[$contains](this.query)) {
+          this.filteredNotes[$add](note[$_get](i));
+        }
+      }
+      return this.filteredNotes;
+    }
+    buildSuggestions(context) {
+      if (this.query === "") {
+        return new container.Container.new({color: colors.Colors.white, child: new basic.Center.new({child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.center, mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new basic.SizedBox.new({width: 50.0, height: 50.0, child: new icon.Icon.new(icons.Icons.search, {size: 50.0, color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[94] || CT.C94}), $creationLocationd_0dea112b090073317d4: C[99] || CT.C99}), new text.Text.new("Enter a note to search.", {style: new text_style.TextStyle.new({color: colors.Colors.black}), $creationLocationd_0dea112b090073317d4: C[104] || CT.C104})]), $creationLocationd_0dea112b090073317d4: C[108] || CT.C108}), $creationLocationd_0dea112b090073317d4: C[113] || CT.C113}), $creationLocationd_0dea112b090073317d4: C[116] || CT.C116});
+      } else {
+        this.filteredNotes = T.JSArrayOfNoteL().of([]);
+        this.getFilteredList(this.notes);
+        if (this.filteredNotes[$length] === 0) {
+          return new container.Container.new({color: colors.Colors.white, child: new basic.Center.new({child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.center, mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new basic.SizedBox.new({width: 50.0, height: 50.0, child: new icon.Icon.new(icons.Icons.sentiment_dissatisfied, {size: 50.0, color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[120] || CT.C120}), $creationLocationd_0dea112b090073317d4: C[125] || CT.C125}), new text.Text.new("No results found", {style: new text_style.TextStyle.new({color: colors.Colors.black}), $creationLocationd_0dea112b090073317d4: C[130] || CT.C130})]), $creationLocationd_0dea112b090073317d4: C[134] || CT.C134}), $creationLocationd_0dea112b090073317d4: C[139] || CT.C139}), $creationLocationd_0dea112b090073317d4: C[142] || CT.C142});
+        } else {
+          return new container.Container.new({color: colors.Colors.white, child: new scroll_view.ListView.builder({itemCount: this.filteredNotes[$length] == null ? 0 : this.filteredNotes[$length], itemBuilder: dart.fn((context, index) => new list_tile.ListTile.new({leading: new icon.Icon.new(icons.Icons.note, {color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[146] || CT.C146}), title: new text.Text.new(this.filteredNotes[$_get](index).title, {style: new text_style.TextStyle.new({fontWeight: ui.FontWeight.bold, fontSize: 18.0, color: colors.Colors.black}), $creationLocationd_0dea112b090073317d4: C[150] || CT.C150}), subtitle: new text.Text.new(this.filteredNotes[$_get](index).description, {style: new text_style.TextStyle.new({fontSize: 14.0, color: colors.Colors.grey}), $creationLocationd_0dea112b090073317d4: C[154] || CT.C154}), onTap: dart.fn(() => {
+                  this.close(context, this.filteredNotes[$_get](index));
+                }, T.VoidToNull()), $creationLocationd_0dea112b090073317d4: C[158] || CT.C158}), T.BuildContextLAndintLToListTileL()), $creationLocationd_0dea112b090073317d4: C[164] || CT.C164}), $creationLocationd_0dea112b090073317d4: C[168] || CT.C168});
+        }
+      }
+    }
+  };
+  (search_note.NotesSearch.new = function(opts) {
+    let notes = opts && 'notes' in opts ? opts.notes : null;
+    this[filteredNotes] = T.JSArrayOfNoteL().of([]);
+    this[notes$] = notes;
+    search_note.NotesSearch.__proto__.new.call(this);
+    ;
+  }).prototype = search_note.NotesSearch.prototype;
+  dart.addTypeTests(search_note.NotesSearch);
+  dart.addTypeCaches(search_note.NotesSearch);
+  dart.setMethodSignature(search_note.NotesSearch, () => ({
+    __proto__: dart.getMethods(search_note.NotesSearch.__proto__),
+    appBarTheme: dart.fnType(dart.legacy(theme_data.ThemeData), [dart.legacy(framework.BuildContext)]),
+    buildActions: dart.fnType(dart.legacy(core.List$(dart.legacy(framework.Widget))), [dart.legacy(framework.BuildContext)]),
+    buildLeading: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    buildResults: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    getFilteredList: dart.fnType(dart.legacy(core.List$(dart.legacy(notes.Note))), [dart.legacy(core.List$(dart.legacy(notes.Note)))]),
+    buildSuggestions: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(search_note.NotesSearch, I[1]);
+  dart.setFieldSignature(search_note.NotesSearch, () => ({
+    __proto__: dart.getFields(search_note.NotesSearch.__proto__),
+    notes: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(notes.Note)))),
+    filteredNotes: dart.fieldType(dart.legacy(core.List$(dart.legacy(notes.Note))))
+  }));
+  dart.trackLibraries("packages/notes_app/screens/search_note.dart", {
+    "package:notes_app/screens/search_note.dart": search_note
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["search_note.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAImB;;;;;;IACN;;;;;;gBAIwB;AACjC,YAAO,AAAQ,OAAD;AACE,kBAAc,AAAY,gBAAT,OAAO,uBAClB,mCACG,gCACV,yCACE,qCACO,iCAA8B,8BAAgB;AAEtE,YAAO,AAAM,KAAD;AACZ,YAAO,MAAK;IACd;iBAGuC;AACrC,YAAO,0BACL,sCACQ,kBACE,2BACQ,yFAEL;AACC,YAAV,aAAQ;;IAIhB;iBAGiC;AAC/B,YAAO,uCACC,kBACE,gCACQ,yFAEL;AACW,UAApB,WAAM,OAAO,EAAE;;IAGrB;iBAGiC;AAC/B,UAAI,AAAM,eAAG;AACX,cAAO,qCACS,4BACP,6BACI,0CAC8B,mDACF,yCACnB,yBAChB,+BACS,cACC,aACD,kBACC,2BACA,aACQ,2IAGlB,kBACE,mCACO,qCAAwB;;AAMrB,QAAlB,qBAAgB;AACM,QAAtB,qBAAgB;AAChB,YAAI,AAAc,AAAO,gCAAG;AAC1B,gBAAO,qCACS,4BACP,6BACI,0CAC8B,mDACF,yCACnB,yBAChB,+BACS,cACC,aACD,kBACC,2CACA,aACQ,2IAGlB,kBACE,4BACO,qCAAwB;;AAMvC,gBAAO,qCACS,4BACE,6CACH,AAAc,AAAO,sCAAU,IAAI,AAAc,0CAC/C,SAAC,SAAS,UACd,qCACI,kBACD,0BACQ,uFAET,kBACL,AAAa,AAAQ,0BAAP,KAAK,iBACZ,0CACoB,8BACb,aACI,4FAEV,kBACR,AAAa,AAAQ,0BAAP,KAAK,uBACZ,wCAAoB,aAAoB,wFAE1C;AAC+B,kBAApC,WAAM,OAAO,EAAE,AAAa,0BAAC,KAAK;;;;IAQlD;oBAEsC;AACpC,eAAS,IAAI,GAAG,AAAE,CAAD,gBAAG,AAAK,IAAD,YAAS,IAAA,AAAC,CAAA;AAChC,YAAI,AAAI,AAAI,AAAM,AAAc,IAAxB,QAAC,CAAC,mCAA+B,eACrC,AAAI,AAAI,AAAY,AAAc,IAA9B,QAAC,CAAC,yCAAqC;AACnB,UAA1B,AAAc,yBAAI,AAAI,IAAA,QAAC,CAAC;;;AAG5B,YAAO;IACT;qBAGqC;AACnC,UAAI,AAAM,eAAG;AACX,cAAO,qCACS,4BACP,6BACI,0CAC8B,mDACF,yCACnB,yBAChB,+BACS,cACC,aACD,kBACC,2BACA,aACQ,2IAGlB,kBACE,mCACO,qCAAwB;;AAMrB,QAAlB,qBAAgB;AACM,QAAtB,qBAAgB;AAChB,YAAI,AAAc,AAAO,gCAAG;AAC1B,gBAAO,qCACS,4BACP,6BACI,0CAC8B,mDACF,yCACnB,yBAChB,+BACS,cACC,aACD,kBACC,2CACA,aACQ,+IAGlB,kBACE,4BACO,qCAAwB;;AAMvC,gBAAO,qCACS,4BACE,6CACH,AAAc,AAAO,sCAAU,IAAI,AAAc,0CAC/C,SAAC,SAAS,UACd,qCACI,kBACD,0BACQ,yFAET,kBACL,AAAa,AAAQ,0BAAP,KAAK,iBACZ,0CACoB,8BACb,aACI,8FAEV,kBACR,AAAa,AAAQ,0BAAP,KAAK,uBACZ,wCAAoB,aAAoB,0FAE1C;AAC+B,kBAApC,WAAM,OAAO,EAAE,AAAa,0BAAC,KAAK;;;;IAQlD;;;QAhOkB;IADP,sBAAgB;IACT;AAAlB;;EAAyB","file":"../../../../../../packages/notes_app/screens/search_note.dart.lib.js"}');
+  // Exports:
+  return {
+    screens__search_note: search_note
+  };
+}));
+
+//# sourceMappingURL=search_note.dart.lib.js.map
